@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Band Name Generator</title>
+</head>
+<body>
+    <h1>🎸 Band Name Generator 🎶</h1>
+    <form method="POST">
+        <label>City Name:</label>
+        <input type="text" name="city" required>
+        <br>
+        <label>Pet Name:</label>
+        <input type="text" name="animal" required>
+        <br>
+        <label>Music Genre:</label>
+        <select name="genre">
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="hip-hop">Hip-Hop</option>
+            <option value="electronic">Electronic</option>
+            <option value="jazz">Jazz</option>
+        </select>
+        <br>
+        <button type="submit">Generate Band Name</button>
+    </form>
+
+    {% if band_name %}
+        <h2>🔥 Your Band Name: {{ band_name }} 🎶</h2>
+    {% endif %}
+</body>
+</html>
